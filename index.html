@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Data Solutions</title>
+  <link rel="icon" href="img/Join_Data.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+  <div class="logo-container">
+    <img src="img/Join_Data.png" alt="Logo Join Data Solutions" class="logo" />
+    <h1>Join Data <span>Solutions</span></h1>
+  </div>
+
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#soluciones">Soluciones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+</header>
+
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h2>Transformamos negocios a través de los datos.</h2>
+      <p>Analítica, Inteligencia, Digitalización y Automatización al servicio de tu empresa.</p>
+      <button onclick="scrollToSection('servicios')">Conoce nuestras soluciones</button>
+    </div>
+  </section>
+
+  <section id="servicios" class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>📊 Analítica de Datos</h3>
+        <p>Convertimos tus datos en decisiones con dashboards inteligentes y modelos predictivos.</p>
+      </div>
+      <div class="service-card">
+        <h3>⚙️ Automatización</h3>
+        <p>Optimizamos tus procesos con flujos automáticos integrados en la nube.</p>
+      </div>
+      <div class="service-card">
+        <h3>☁️ Arquitectura Cloud</h3>
+        <p>Diseñamos infraestructuras escalables y seguras en AWS, Azure y Google Cloud.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="soluciones" class="solutions">
+    <h2>Soluciones Personalizadas</h2>
+    <p>Adaptamos la tecnología a tu modelo de negocio para generar resultados medibles impulsados por datos.</p>
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required />
+      <input type="email" placeholder="Correo electrónico" required />
+      <textarea placeholder="Mensaje" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="social-links">
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Join Data Solutions | Transformamos negocios a través de los datos.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
