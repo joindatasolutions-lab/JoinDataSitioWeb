@@ -14,38 +14,44 @@ body {
 }
 
 /* ========================
-   HEADER (CENTRADO)
+   HEADER (Ajustado)
 ======================== */
 header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* Menú a la derecha */
+  justify-content: space-between;
   background-color: #ffffffcc;
   backdrop-filter: blur(10px);
-  padding: 10px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Franja delgada (6px) y margen de 1cm (40px) */
+  padding: 6px 40px; 
+  width: 100%;
+  box-sizing: border-box;
   position: fixed;
   top: 0;
-  width: 100%;
   z-index: 1000;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin: 0;
+  padding-left: 0; 
+  flex-shrink: 0; 
 }
 
 .logo {
-  height: 45px;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in forwards;
+  width: 180px; 
+  height: auto;
+  display: block;
 }
 
 header h1 {
-  font-size: 1.3rem;
+  margin: 0;
+  font-size: 1.6rem; 
   font-weight: 700;
+  text-align: left;
   color: var(--primary-color);
 }
 
@@ -53,12 +59,12 @@ header h1 span {
   color: var(--accent-color);
 }
 
-/* NAVIGATION (centrado bajo el logo) */
+/* NAVIGATION (alineado a la derecha) */
 nav ul {
   list-style: none;
   display: flex;
   gap: 35px;
-  margin: 10px 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -81,29 +87,36 @@ nav a:hover {
   color: var(--primary-color);
   user-select: none;
   position: absolute;
-  top: 20px;
-  right: 25px;
+  top: 10px;
+  right: 40px; 
+  margin-left: 12px;
 }
 
 /* ========================
    HERO SECTION
 ======================== */
 .hero {
+  /* MODIFICADO: Aplicación de la NUEVA imagen de fondo */
   height: 100vh;
-  background: linear-gradient(-45deg, #00324a, #00b3a4, #004e5c, #009e8f);
-  background-size: 400% 400%;
-  animation: gradientMove 10s ease infinite;
+  background: url('img/fondo_hero_automatizacion.png') no-repeat center center;
+  background-size: cover;
+  /* Overlay oscuro para legibilidad sobre fondo complejo */
+  box-shadow: inset 0 0 0 1000px rgba(0, 50, 74, 0.4); 
+  
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
+  /* Alinear el contenido a la izquierda y arriba */
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  /* Aplicar el margen lateral del header y compensar la altura del header fijo */
+  padding: 120px 40px 0 40px; 
 }
 
 .hero-content {
   max-width: 700px;
   animation: fadeIn 1.5s ease-out;
+  /* Aseguramos la justificación del texto interno a la izquierda */
+  text-align: left; 
 }
 
 .hero h2 {
@@ -279,11 +292,17 @@ footer {
 ======================== */
 @media (max-width: 768px) {
   header {
-    padding: 10px 0 5px;
+    padding: 10px 20px; 
+  }
+  
+  .logo {
+    width: 140px; 
   }
 
   .menu-toggle {
     display: block;
+    top: 15px; 
+    right: 25px;
   }
 
   nav ul {
