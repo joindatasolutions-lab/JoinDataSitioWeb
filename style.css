@@ -183,8 +183,10 @@ nav a:hover {
    SOLUTIONS SECTION (MODIFICADO)
 ======================== */
 .solutions {
+  /* Fondo oscuro: #00324a */
   background: var(--primary-color);
-  color: white;
+  /* El texto del título y subtítulo sigue siendo blanco */
+  color: white; 
   text-align: center;
   padding: 80px 40px; 
 }
@@ -195,128 +197,170 @@ nav a:hover {
 }
 
 .solutions-subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 40px;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+    opacity: 0.9;
 }
 
+/* ESTILOS PARA LAS TARJETAS DE SOLUCIONES */
 .solutions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+    display: grid;
+    /* Grid de 3 columnas para PC */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
 }
 
 .solution-card {
-  /* MODIFICACIÓN CLAVE: Fondo blanco para contraste */
-  background: #FFFFFF; 
-  border-radius: 12px;
-  padding: 30px 20px;
-  box-sizing: border-box; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Añadimos una sombra sutil para destacar el card */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* MODIFICADO: Fondo blanco */
+    background: white; 
+    /* MODIFICADO: Color de texto de la tarjeta a color principal */
+    color: var(--font-color);
+    border-radius: 12px;
+    padding: 30px;
+    /* Centramos el contenido principal (el logo) y luego forzamos el texto a la izquierda en el párrafo */
+    text-align: center; 
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .solution-card:hover {
-  /* Al hacer hover, se aplica el efecto de sombra y elevación */
-  transform: translateY(-5px); 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    /* Sombra más sutil en hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
 }
 
-.solution-img {
-  /* MODIFICACIÓN CLAVE: Aumento del tamaño de la imagen */
-  width: 180px; 
-  height: auto;
-  margin-bottom: 25px;
-  transition: transform 0.3s ease; 
+/* MODIFICADO: Clase para el logo grande */
+.solution-logo-lg {
+    /* MODIFICADO: Tamaño del logo aumentado en un 50% (150px * 1.5 = 225px) */
+    width: 225px; 
+    height: auto;
+    display: block;
+    /* CENTRADO: Auto-margen horizontal */
+    margin: 0 auto 15px auto; 
 }
 
-.solution-card:hover .solution-img {
-  transform: scale(1.05);
+.solution-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    /* Asegurar que el texto dentro de la tarjeta no sea blanco y alinearlo a la izquierda */
+    color: var(--font-color); 
+    text-align: left; /* Alinea el párrafo a la izquierda */
 }
 
-.solution-title {
-  /* MODIFICACIÓN: Color ajustado para contraste en fondo blanco */
-  color: var(--primary-color); 
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
+/* ELIMINADO: Se eliminan los estilos de la sección de contacto */
+.contact { display: none; }
 
-.solution-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  /* MODIFICACIÓN: Color ajustado para contraste en fondo blanco */
-  color: var(--font-color); 
-}
 
 /* ========================
-   CONTACT SECTION
+   FOOTER (MODIFICADO)
 ======================== */
-.contact {
-  padding: 100px 40px;
-  text-align: center;
-  background-color: var(--background-color);
+.main-footer {
+  /* INVERTIDO: Fondo blanco */
+  background-color: white; 
+  /* INVERTIDO: Color de texto general a primary color */
+  color: var(--primary-color); 
+  padding: 50px 40px 0; 
+  font-size: 0.95rem;
 }
 
-.contact form {
+.footer-grid {
+  display: grid;
+  /* Columnas uniformes */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  /* AUMENTADO: Gap entre las columnas para mayor espacio horizontal */
+  gap: 80px; 
+  /* AUMENTADO: Max-width para cubrir casi todo el ancho de la sección */
+  max-width: 1600px; 
+  margin: 0 auto;
+  padding-bottom: 30px; 
+  /* Borde sutil oscuro */
+  border-bottom: 1px solid rgba(0, 50, 74, 0.1);
+}
+
+.footer-title {
+  /* Título en primary color */
+  color: var(--primary-color); 
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  /* Texto a font-color */
+  color: var(--font-color); 
+  transition: color 0.3s;
+}
+
+.footer-list li:hover {
+  /* Mantenemos el acento turquesa en el hover */
+  color: var(--accent-color); 
+}
+
+/* Estilo específico para la columna de branding (Logo y Slogan) */
+.branding-col {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-  gap: 15px;
+  gap: 10px;
 }
 
-.contact input,
-.contact textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
+.footer-logo {
+  width: 150px; 
+  height: auto;
+  filter: none; /* No necesita filtro en fondo claro */
 }
 
-.contact button {
-  background-color: var(--accent-color);
-  border: none;
-  padding: 12px;
-  color: white;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.slogan {
+  line-height: 1.6;
+  font-weight: 400;
+  /* Slogan a font-color con opacidad */
+  color: var(--font-color);
+  opacity: 0.8;
+  font-size: 0.9rem; 
 }
 
-.contact button:hover {
-  background-color: var(--primary-color);
+/* Estilo para la lista de contacto (Font Awesome) */
+.contact-info-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap; 
 }
 
-.social-links {
-  margin-top: 25px;
-}
-
-.social-links a {
-  margin: 0 10px;
-  color: var(--accent-color);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-/* ========================
-   FOOTER
-======================== */
-footer {
-  background-color: var(--primary-color);
-  color: white;
+.contact-info-list li i {
+  /* Iconos en color acento */
+  color: var(--accent-color); 
+  font-size: 1.1rem; 
+  width: 20px; 
   text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
 }
 
+/* Estilo para la línea de derechos de autor */
+.footer-bottom {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.8rem;
+  /* Texto de derechos de autor a font-color con opacidad */
+  color: var(--font-color);
+  opacity: 0.7;
+}
+
+
 /* ========================
-   ANIMATIONS
+   ANIMATIONS y RESPONSIVE
 ======================== */
 @keyframes gradientMove {
   0% {
@@ -342,16 +386,8 @@ footer {
 }
 
 /* ========================
-   RESPONSIVE MENU Y SOLUCIONES
+   RESPONSIVE MENU
 ======================== */
-@media (max-width: 992px) { 
-  .solutions-grid {
-    /* En pantallas medianas, la cuadrícula se convierte en una columna */
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
 @media (max-width: 768px) {
   header {
     padding: 10px 20px; 
@@ -399,12 +435,24 @@ footer {
     font-size: 1rem;
   }
 
-  .solutions {
-    padding: 60px 20px; 
+  /* RESPONSIVE FOOTER */
+  .main-footer { padding: 40px 20px 0; }
+
+  .footer-grid {
+    grid-template-columns: 1fr; 
+    gap: 30px;
+    text-align: left;
+  }
+  
+  .footer-col {
+    border-bottom: 1px solid rgba(0, 50, 74, 0.05); 
+    padding-bottom: 20px;
   }
 
-  .solution-img {
-    /* Ajuste responsivo del tamaño de la imagen */
-    width: 140px;
+  .footer-col:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
   }
+
+  .branding-col { align-items: flex-start; }
 }

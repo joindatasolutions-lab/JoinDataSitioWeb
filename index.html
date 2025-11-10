@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Join Data Solutions</title>
   <link rel="icon" href="img/Join_Data.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <header>
@@ -40,63 +41,82 @@
     <h2>Nuestros Servicios</h2>
     <div class="service-grid">
       <div class="service-card">
-        <h3>📊 Analítica de Datos</h3>
+        <h3>Analítica de Datos</h3>
         <p>Convertimos tus datos en decisiones con dashboards inteligentes y modelos predictivos.</p>
       </div>
       <div class="service-card">
-        <h3>⚙️ Automatización</h3>
+        <h3>Automatización</h3>
         <p>Optimizamos tus procesos con flujos automáticos integrados en la nube.</p>
       </div>
       <div class="service-card">
-        <h3>☁️ Arquitectura Cloud</h3>
+        <h3>Arquitectura Cloud</h3>
         <p>Diseñamos infraestructuras escalables y seguras en AWS, Azure y Google Cloud.</p>
       </div>
     </div>
   </section>
 
   <section id="soluciones" class="solutions">
-    <h2>Nuestras Soluciones SaaS</h2>
+    <h2>Soluciones Personalizadas</h2>
     <p class="solutions-subtitle">Adaptamos la tecnología a tu modelo de negocio para generar resultados medibles impulsados por datos.</p>
-
+    
     <div class="solutions-grid">
       <div class="solution-card">
-        <img src="img/Join_Flower.png" alt="Logo Join Flower" class="solution-img" />
-        <h3 class="solution-title">JOIN FLOWER</h3>
-        [cite_start]<p class="solution-description">Automatización de principio a fin de pedidos, producción y envíos para Floristerías, control total de tu operación a un click</p>
+        <img src="img/Join_Flower.png" alt="Logo Join Flower" class="solution-logo-lg" />
+        <p>Automatización de principio a fin de pedidos, producción y envíos, con notificaciones por WhatsApp, especializado para floristerías.</p>
       </div>
-
       <div class="solution-card">
-        <img src="img/Join_Store.png" alt="Logo Join Store" class="solution-img" />
-        <h3 class="solution-title">JOIN STORE</h3>
-        [cite_start]<p class="solution-description">Ventas 24/7 sin intervención humana por WhatsApp, con carrito, pago y notificaciones totalmente automáticas.</p>
+        <img src="img/Join_Store.png" alt="Logo Join Store" class="solution-logo-lg" />
+        <p>Automatización de ventas 24/7 a través de WhatsApp: Gestiona tu catálogo, carrito de compras, pagos y notificaciónes automáticamente, sin intervención humana.</p>
       </div>
-
       <div class="solution-card">
-        <img src="img/Join_App.png" alt="Logo Join App" class="solution-img" />
-        <h3 class="solution-title">JOIN APP</h3>
-        [cite_start]<p class="solution-description">Claridad financiera inmediata para microempresas, transformando registros manuales en Dashboards de Utilidad y ventas en tiempo real.</p>
+        <img src="img/Join_App.png" alt="Logo Join App" class="solution-logo-lg" />
+        <p>Transforma cuadernos contables en Dashboards profesionales de ventas en tiempo real, enfocado en lo que realmente importa.</p>
       </div>
     </div>
   </section>
-  <section id="contacto" class="contact">
-    <h2>Contáctanos</h2>
-    <form>
-      <input type="text" placeholder="Nombre" required />
-      <input type="email" placeholder="Correo electrónico" required />
-      <textarea placeholder="Mensaje" rows="4" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <div class="social-links">
-      <a href="#" target="_blank">LinkedIn</a>
-      <a href="#" target="_blank">Instagram</a>
-      <a href="#" target="_blank">WhatsApp</a>
-    </div>
-  </section>
+  <footer class="main-footer" id="contacto">
+    <div class="footer-grid">
+      
+      <div class="footer-col branding-col">
+        <div class="logo-and-name">
+            <img src="img/Join_Data.png" alt="Logo Join Data Solutions" class="footer-logo" />
+        </div>
+        <p class="slogan">Transformamos tu negocio a través de datos: Aumentamos la velocidad, eficiencia y rentabilidad de tu empresa.</p>
+      </div>
 
-  <footer>
-    <p>© 2025 Join Data Solutions | Transformamos negocios a través de los datos.</p>
+      <div class="footer-col">
+        <h3 class="footer-title">Servicios</h3>
+        <ul class="footer-list">
+          <li>Analítica de datos</li>
+          <li>Automatización</li>
+          <li>Arquitectura Cloud</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title">Soluciones</h3>
+        <ul class="footer-list">
+          <li>Join Flower</li>
+          <li>Join Store</li>
+          <li>Join App</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-title contact-title">Contacto</h3>
+        <ul class="contact-info-list footer-list">
+          <li><i class="fas fa-envelope"></i> contacto@joindata.com</li>
+          <li><i class="fab fa-whatsapp"></i> +57 3043840770</li>
+          <li><i class="fab fa-instagram"></i> join_data</li>
+          <li><i class="fab fa-tiktok"></i> joindatasol</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Join Data Solutions | Todos los derechos reservados.</p>
+    </div>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
